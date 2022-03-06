@@ -1,0 +1,162 @@
+$color_yellow: #ffb336
+$color_blue: #27232F
+$color_white: #f3f7f7
+$color_grey: #333
+
+$font_base_size: 10px
+
+$max_content_width: 768px
+
+$button_border_width: 1px
+
+
+*
+  // border: solid 1px
+  position: relative
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+  
+html,body
+  padding: 0px
+  margin: 0px
+  
+.header
+  height: 300px
+  background-color: $color_blue
+  
+  & .icon
+    width: 150px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+  
+.maxwidth
+  max-width: $max_content_width
+  margin-left: auto
+  margin-right: auto
+  
+.content
+  // font-family: 微軟正黑體
+  font-family: 'Fjalla One', sans-serif ,微軟正黑體
+  padding: 50px
+  
+  & h5
+    margin-top: 10px
+  
+  & h1
+    font-size: $font_base_size*4
+  
+  & h1.small_english
+    font-size: $font_base_size*2.4
+    
+  & h2
+    font-size: $font_base_size*3
+  
+  & h2.small_english
+    font-size: $font_base_size*1.6
+    
+  & h3
+    font-size: $font_base_size*2
+    
+  & h3.small_english
+    font-size: $font_base_size*1.2
+  
+  & .titlehr
+    width: 100px
+    border-bottom: solid 5px
+    
+  & .small_english
+    letter-spacing: 1px
+    margin-top: -15px
+    
+  & .button
+    padding: 5px 25px
+    display: inline-block
+    border: solid $button_border_width $color_grey
+    margin-right: 10px
+    letter-spacing: 2px
+    font-size: $font-base-size*1.5
+    font-weight: bold
+    
+  & .button_blue
+    background-color: $color_blue
+    color: $color_white
+    font-weight: 500
+    
+  & .button_yellow
+    background-color: $color_yellow
+    color: $color_blue
+    // font-weight: 500
+  
+  & .colorchip
+    display: inline-block
+    margin-right: 30px
+    
+  & .color_tag,.color_block
+    display: inline-block
+    vertical-align: middle
+    
+  & .color_tag
+    width: 60px
+    
+  & .color_block
+    border: solid 2px  
+    +size(30px,30px)
+  
+  & .color_block_yellow 
+    background-color: $color_yellow
+  & .color_block_blue 
+    background-color: $color_blue
+  & .color_block_white 
+    background-color: $color_white
+  & .color_block_grey 
+    background-color: $color_grey
+      
+.content_grey
+  background-color: $color_grey
+  color: $color_white
+  & .small_english
+    color: $color_yellow
+  & .titlehr
+    border-color: $color_yellow
+  & h1,& h2,& h3
+    font-weight: 500
+  & .button
+    border-color: $color_white
+    font-weight: 500
+  & .button_yellow
+    font-weight: bold  
+
+.content_white
+  background-color: $color_white
+  color: $color_blue
+  & .small_english
+    color: $color_blue
+  & .titlehr
+    border-color: $color_yellow
+  & h1,& h2,& h3
+    // font-weight: 500
+  & .button
+    border-color: $color_blue
+    // font-weight: 500
+
+
+.content_blue
+  background-color: $color_blue
+  color: $color_white
+  & .small_english
+    color: $color_yellow
+  & .titlehr
+    border-color: $color_yellow
+  & h1,& h2,& h3
+    font-weight: 500
+  & .button
+    border-color: $color_white
+    font-weight: 500
+  & .button_yellow
+    font-weight: bold  
+
+    
