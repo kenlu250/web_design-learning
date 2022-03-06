@@ -1,0 +1,101 @@
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+.box,.block
+  border: solid 2px
+ 
+.box
+  +size(900px,500px)
+  position: relative
+
+.block
+  +size(50px,50px)
+  position: absolute
+  bottom: 0px
+  
+.block1
+  left: 150px
+  animation: nai1 2s infinite
+  
+.block2
+  left: 300px
+  animation: nai2 2s infinite
+  animation-delay: 2s
+  
+.block3
+  left: 450px
+  animation: nai3 2s infinite
+  animation-delay: 4s
+  
+.block4
+  left: 600px
+  animation: nai4 2s infinite
+  animation-delay: 6s
+  
+.block5
+  left: 750px
+  animation: nai5 2s infinite
+  animation-delay: 8s
+  
+@keyframes nai1
+  0%
+    bottom: 100px
+  50%
+    bottom: 0px
+    background-color: red
+  100%
+    bottom: 100px
+  
+@keyframes nai2
+  0%
+    bottom: 100px
+  30%
+    background-color: white
+    transform: rotate(0deg)
+  50%
+    bottom: 0px
+    background-color: red
+    transform: rotate(180deg)
+  70%
+    background-color: white
+    transform: rotate(0deg)
+  100%
+    bottom: 100px
+  
+@keyframes nai3
+  0%
+    bottom: 100px
+  30%
+    transform: scale(1)
+  50%
+    bottom: 0px
+    transform: scale(0.5)
+  70%
+    transform: scale(1)
+  100%
+    bottom: 100px
+  
+@keyframes nai4
+  0%
+    transform: translateX(0px) translateY(0px)
+  20%
+    transform: translateX(50px) translateY(0px)
+  40%
+    transform: translateX(50px) translateY(-50px)
+  60%
+    transform: translateX(0px) translateY(-50px)
+  80%
+    transform: translateX(0px) translateY(0px)
+  
+@keyframes nai5
+  0%
+    transform: skewX(20deg)
+    transform-origin: 0% 100%
+  50%
+    transform: skewX(-20deg)
+    transform-origin: 0% 100%
+  100%
+    transform: skewX(20deg)
+    transform-origin: 0% 100%
+  
